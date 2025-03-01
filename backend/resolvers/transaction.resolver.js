@@ -43,7 +43,7 @@ const transactionResolver = {
     },
     updateTransaction: async (_, { input }) => {
       try {
-        const updatedTransaction = await Transaction.findByIdAndDelete(
+        const updatedTransaction = await Transaction.findByIdAndUpdate(
           input.transactionId,
           input,
           { new: true }
