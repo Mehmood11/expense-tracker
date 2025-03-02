@@ -18,10 +18,12 @@ import mergedTypeDefs from "./type-defs/index.js";
 import mergeResolvers from "./resolvers/index.js";
 import { connectDB } from "./db/connect-db.js";
 import { configurePassport } from "./passport/passport.config.js";
-import exp from "constants";
+import job from "./cron.js";
 
 dotenv.config();
 configurePassport();
+
+job.start();
 
 const __dirname = path.resolve();
 const app = express();
