@@ -29,7 +29,7 @@ const Cards = () => {
             <Card
               key={transaction._id}
               transaction={transaction}
-              //   authUser={authUser.authUser}
+              authUser={authUser.authUser}
             />
           ))}
       </div>
